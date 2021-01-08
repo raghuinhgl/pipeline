@@ -10,29 +10,25 @@ pipeline {
              '''
              }
     }
-    stage ('deploy') {
+    stage ('deploy') { 
     parallel {
-    stage ('deploy') {
+    stage ('deploy1') {
     agent { label 'slave-02' }
        steps {
           sh '''
                   echo "this is deploy stage"
                   sleep 2
-  
              '''
              }
-            
     }
-    stage ('deploy') {
+      stage ('deploy2') {
     agent { label 'slave-02' }
        steps {
           sh '''
                   echo "this is deploy stage"
                   sleep 2
-  
              '''
              }
-            
     }
     }
     }
