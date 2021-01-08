@@ -11,7 +11,7 @@ pipeline {
              }
     }
     stage ('deploy') {
-    aget { label 'slave-02' }
+    aget { label 'javacod-s1' }
        steps {
           sh '''
                   echo "this is deploy stage"
