@@ -13,10 +13,16 @@ pipeline {
     stage ('deploy') {
     agent { label 'slave-02' }
        steps {
+       parallel(
           sh '''
                   echo "this is deploy stage"
                   sleep 2
              '''
+             sh '''
+                  echo "this is deploy stage1"
+                  sleep 2
+             '''
+             )
              }
             
     }
