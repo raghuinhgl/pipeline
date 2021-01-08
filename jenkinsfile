@@ -11,7 +11,7 @@ pipeline {
              }
     }
     stage ('deploy') {
-    agent { label 'javacod-s1' }
+    agent { label 'slave-02' }
        steps {
           sh '''
                   echo "this is deploy stage"
