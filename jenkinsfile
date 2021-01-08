@@ -17,10 +17,7 @@ pipeline {
           sh '''
                   echo "this is deploy stage"
                   sleep 2
-             
-             
-                  echo "this is deploy stage1"
-                  sleep 2
+  
              '''
              )
              }
